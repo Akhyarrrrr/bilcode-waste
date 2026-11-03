@@ -70,11 +70,11 @@ dikelola EAS. Ikon dan splash dibuat ulang dengan `node scripts/mobile-icons.mjs
 
 - `npm run typecheck -w @bilcode/mobile`, `npm test -w @bilcode/mobile` (29 tes), `npx eslint apps/mobile`,
   `npx expo-doctor` (20/20), dan `npx expo export --platform android` lulus.
-- Diuji di emulator Android API 36 melalui Expo Go dengan API, database, dan model lokal:
-  - onboarding, login akun demo, Beranda, Laporan, Detail, dan Akun;
-  - alur penuh: foto dari galeri → saran AI "Kertas" → GPS + peta → tinjau → terkirim sebagai laporan
-    Menunggu yang langsung muncul di Beranda;
-  - mode gelap.
+- APK 1.0.0 dari EAS diuji di emulator Android API 36 terhadap API produksi:
+  - onboarding, login akun demo, Beranda dengan data produksi;
+  - foto dari galeri → saran AI "Plastik" dari model produksi → GPS + peta → tinjau → terkirim;
+  - admin memproses laporan itu, dan APK menampilkan status "Diproses" beserta catatan admin.
+- Mode gelap diuji di emulator.
 - Belum diuji di perangkat Android fisik maupun iOS.
 - `react-native-worklets` sengaja dipin ke 0.13.1 (Expo SDK 58 mencatat 0.13.0). Reanimated 4.7.1
   meminta `0.13.x`, dan satu salinan menghindari ketidakcocokan native. Versi ini dikecualikan dari

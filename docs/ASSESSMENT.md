@@ -53,7 +53,7 @@ API, PostgreSQL, dan model yang berjalan di mesin pengembang; "Cloud" berarti di
 | Accuracy ≥ 80%                                    | 98,53% (335/340)                                                           |
 | REST API prediksi (FastAPI)                       | `ml/inference/app.py`; pytest layanan model                                |
 
-## Pemeriksaan otomatis
+## Pemeriksaan otomatis (lokal)
 
 | Perintah                          | Hasil terakhir                             |
 | --------------------------------- | ------------------------------------------ |
@@ -61,9 +61,21 @@ API, PostgreSQL, dan model yang berjalan di mesin pengembang; "Cloud" berarti di
 | `npm run lint`                    | Lulus                                      |
 | `npm test`                        | API 18, mobile 29, web 8, kontrak 3: lulus |
 | `npm run build`                   | Lulus                                      |
-| `npm run test:e2e` (lokal)        | 7 dari 7 alur lulus                        |
+| `npm run test:e2e`                | 7 dari 7 alur lulus                        |
 | `npx expo-doctor`                 | 20/20                                      |
-| `pytest ml/inference/test_app.py` | Lulus                                      |
+| `pytest ml/inference/test_app.py` | 7 lulus                                    |
+
+## Verifikasi produksi (3 November 2026)
+
+| Pemeriksaan                                  | Hasil                                                                                       |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| API `/health`, `/health/ready`, ML `/health` | Versi 1.0.0; database dan model `up`; model `realwaste-mobilenetv3-099ff8e5e058`            |
+| E2E Playwright terhadap website produksi     | 7 dari 7 alur lulus                                                                         |
+| Akun demo                                    | `isLocked: true`; ganti kata sandi ditolak 403                                              |
+| APK 1.0.0 di emulator Android 36             | Login akun demo, foto dari galeri → saran AI "Plastik" dari model produksi → GPS → terkirim |
+| Integrasi dua arah                           | Admin mengubah laporan dari APK menjadi Diproses; APK menampilkan status dan catatan admin  |
+
+Data demo di-reset setelah semua pengujian, sehingga yang terlihat penilai hanya 24 laporan demo.
 
 ## Belum diverifikasi
 
