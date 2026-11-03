@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "cd ../.. && npm ci --include=dev",
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://bilcode-waste-api.vercel.app/api/:path*"
+    },
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}

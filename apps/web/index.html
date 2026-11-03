@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="theme-color"
+      content="#fafafa"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#09090b"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta
+      name="description"
+      content="Bilcode Waste: laporkan sampah dengan foto dan lokasi, dapatkan saran kategori dari model AI, dan pantau penanganannya. Proyek technical assessment."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Bilcode Waste</title>
+    <script>
+      // Apply the saved or system theme before first paint (mirrors src/app/theme.tsx).
+      try {
+        const saved = localStorage.getItem("bilcode-theme");
+        const dark = saved
+          ? saved === "dark"
+          : matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.classList.toggle("dark", dark);
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

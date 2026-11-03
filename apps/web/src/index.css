@@ -1,0 +1,244 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "@fontsource-variable/plus-jakarta-sans/wght.css";
+@import "leaflet/dist/leaflet.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Tokens mirror docs/DESIGN.md and apps/mobile/src/theme/tokens.ts; change all three together. */
+:root {
+  --radius: 0.75rem;
+  --background: #fafafa;
+  --foreground: #18181b;
+  --card: #ffffff;
+  --card-foreground: #18181b;
+  --popover: #ffffff;
+  --popover-foreground: #18181b;
+  --primary: #047857;
+  --primary-foreground: #ffffff;
+  --primary-soft: #ecfdf5;
+  --secondary: #f4f4f5;
+  --secondary-foreground: #18181b;
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --accent: #f4f4f5;
+  --accent-foreground: #18181b;
+  --destructive: #be123c;
+  --border: #e4e4e7;
+  --input: #d4d4d8;
+  --ring: #10b981;
+
+  --status-pending: #b45309;
+  --status-pending-bg: #fffbeb;
+  --status-progress: #1d4ed8;
+  --status-progress-bg: #eff6ff;
+  --status-done: #047857;
+  --status-done-bg: #ecfdf5;
+  --status-rejected: #be123c;
+  --status-rejected-bg: #fff1f2;
+
+  /* Indonesian sorted-bin colours. */
+  --cat-organic: #15803d;
+  --cat-plastic: #d97706;
+  --cat-paper: #2563eb;
+
+  --chart-1: var(--primary);
+  --chart-2: var(--cat-paper);
+  --chart-3: var(--cat-plastic);
+  --chart-4: var(--cat-organic);
+  --chart-5: var(--muted-foreground);
+
+  --sidebar: #ffffff;
+  --sidebar-foreground: #18181b;
+  --sidebar-primary: #047857;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ecfdf5;
+  --sidebar-accent-foreground: #065f46;
+  --sidebar-border: #e4e4e7;
+  --sidebar-ring: #10b981;
+}
+
+.dark {
+  --background: #09090b;
+  --foreground: #fafafa;
+  --card: #18181b;
+  --card-foreground: #fafafa;
+  --popover: #18181b;
+  --popover-foreground: #fafafa;
+  --primary: #34d399;
+  --primary-foreground: #022c22;
+  --primary-soft: #064e3b;
+  --secondary: #27272a;
+  --secondary-foreground: #fafafa;
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+  --accent: #27272a;
+  --accent-foreground: #fafafa;
+  --destructive: #fb7185;
+  --border: #27272a;
+  --input: #3f3f46;
+  --ring: #34d399;
+
+  --status-pending: #fcd34d;
+  --status-pending-bg: #451a03;
+  --status-progress: #93c5fd;
+  --status-progress-bg: #172554;
+  --status-done: #6ee7b7;
+  --status-done-bg: #064e3b;
+  --status-rejected: #fda4af;
+  --status-rejected-bg: #4c0519;
+
+  --cat-organic: #16a34a;
+  --cat-plastic: #d97706;
+  --cat-paper: #3b82f6;
+
+  --sidebar: #0f0f12;
+  --sidebar-foreground: #fafafa;
+  --sidebar-primary: #34d399;
+  --sidebar-primary-foreground: #022c22;
+  --sidebar-accent: #064e3b;
+  --sidebar-accent-foreground: #d1fae5;
+  --sidebar-border: #27272a;
+  --sidebar-ring: #34d399;
+}
+
+@theme inline {
+  --font-sans:
+    "Plus Jakarta Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-lg: calc(var(--radius) - 4px);
+  --radius-xl: var(--radius);
+  --radius-2xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-status-pending: var(--status-pending);
+  --color-status-pending-bg: var(--status-pending-bg);
+  --color-status-progress: var(--status-progress);
+  --color-status-progress-bg: var(--status-progress-bg);
+  --color-status-done: var(--status-done);
+  --color-status-done-bg: var(--status-done-bg);
+  --color-status-rejected: var(--status-rejected);
+  --color-status-rejected-bg: var(--status-rejected-bg);
+  --color-cat-organic: var(--cat-organic);
+  --color-cat-plastic: var(--cat-plastic);
+  --color-cat-paper: var(--cat-paper);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --animate-bar-grow: bar-grow 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes bar-grow {
+    from {
+      transform: scaleX(0);
+    }
+  }
+}
+
+@keyframes scan {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(300%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01";
+  }
+  h1,
+  h2,
+  h3 {
+    @apply tracking-tight text-balance;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+}
+
+@layer utilities {
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Leaflet sits under app overlays and follows the theme. */
+.leaflet-container {
+  font-family: inherit;
+  background: var(--muted);
+  z-index: 0;
+}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: var(--popover);
+  color: var(--popover-foreground);
+  border-radius: var(--radius);
+}
+.leaflet-control-attribution.leaflet-control {
+  font-size: 10px;
+  background: color-mix(in oklab, var(--card) 85%, transparent);
+  color: var(--muted-foreground);
+}
+.leaflet-control-attribution a {
+  color: var(--primary);
+}
+.leaflet-bar.leaflet-control {
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) - 4px);
+  overflow: hidden;
+}
+.leaflet-bar a,
+.leaflet-bar a:hover {
+  background: var(--card);
+  color: var(--foreground);
+  border-color: var(--border);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}
