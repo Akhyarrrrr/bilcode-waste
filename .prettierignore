@@ -1,0 +1,16 @@
+node_modules
+dist
+package-lock.json
+ml
+.local
+.vercel
+.expo
+.claude
+.superpowers
+test-results
+playwright-report
+apps/api/src/generated
+apps/api/prisma/migrations
+# Generated files: keep them byte-for-byte as their scripts write them.
+apps/api/prisma/demo-images/catalog.json
+docs/openapi.json
