@@ -22,16 +22,16 @@ dan Prisma Client.
 
 ## Environment variable API
 
-| Variabel                     | Isi                                                           |
-| ---------------------------- | ------------------------------------------------------------- |
-| `DATABASE_URL`, `DIRECT_URL` | Koneksi PostgreSQL                                            |
-| `NODE_ENV=production`        | Cookie `Secure` dan pengecekan konfigurasi produksi           |
-| `SESSION_SECRET`             | Secret acak ≥ 32 karakter untuk tanda tangan URL foto         |
-| `API_URL`, `WEB_ORIGIN`      | Origin API dan web; dipakai untuk CORS dan cek `Origin`       |
-| `STORAGE_DRIVER=vercel-blob` | Adapter penyimpanan                                           |
-| `BLOB_READ_WRITE_TOKEN`      | Token Blob, hanya di server                                   |
-| `ML_URL`, `ML_API_KEY`       | URL layanan model dan kunci internal yang sama dengan FastAPI |
-| `DEMO_LOCKED_EMAILS`         | `admin@bilcode-waste.test,user@bilcode-waste.test`            |
+| Variabel                     | Isi                                                                   |
+| ---------------------------- | --------------------------------------------------------------------- |
+| `DATABASE_URL`, `DIRECT_URL` | Koneksi PostgreSQL                                                    |
+| `NODE_ENV=production`        | Cookie `Secure` dan pengecekan konfigurasi produksi                   |
+| `SESSION_SECRET`             | Secret acak ≥ 32 karakter untuk tanda tangan URL foto                 |
+| `API_URL`, `WEB_ORIGIN`      | Origin API dan web; dipakai untuk CORS dan cek `Origin`               |
+| `STORAGE_DRIVER=vercel-blob` | Adapter penyimpanan                                                   |
+| `BLOB_READ_WRITE_TOKEN`      | Token Blob, hanya di server                                           |
+| `ML_URL`, `ML_API_KEY`       | URL layanan model dan kunci internal yang sama dengan FastAPI         |
+| `DEMO_LOCKED_EMAILS`         | Opsional. Default: `admin@bilcode-waste.test,user@bilcode-waste.test` |
 
 Di Vercel, API memercayai `X-Forwarded-For` (rate limit per IP) karena edge Vercel menimpa header itu.
 Di luar Vercel, header tersebut diabaikan. Layanan model hanya butuh `ML_API_KEY`; model dan metadata

@@ -32,7 +32,11 @@ export const config = {
   mlKey: process.env.ML_API_KEY ?? "",
   // Vercel overwrites X-Forwarded-For at its edge, so the header is only trusted there.
   trustProxy: Boolean(process.env.VERCEL),
-  demoLockedEmails: (process.env.DEMO_LOCKED_EMAILS ?? "")
+  // Defaults to the seeded shared accounts so a deploy cannot forget to lock them.
+  demoLockedEmails: (
+    process.env.DEMO_LOCKED_EMAILS ??
+    "admin@bilcode-waste.test,user@bilcode-waste.test"
+  )
     .split(",")
     .map((s) => s.trim().toLowerCase())
     .filter(Boolean),
