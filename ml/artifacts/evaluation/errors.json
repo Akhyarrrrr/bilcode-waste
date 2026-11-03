@@ -1,0 +1,47 @@
+[
+  {
+    "path": "realwaste-main/RealWaste/Food Organics/Food Organics_122.jpg",
+    "actual": "ORGANIC",
+    "predicted": "PLASTIC",
+    "confidence": 0.907928466796875,
+    "ORGANIC": 0.09090493619441986,
+    "PLASTIC": 0.907928466796875,
+    "PAPER": 0.0011666573118418455
+  },
+  {
+    "path": "realwaste-main/RealWaste/Paper/Paper_17.jpg",
+    "actual": "PAPER",
+    "predicted": "PLASTIC",
+    "confidence": 0.7394324541091919,
+    "ORGANIC": 0.0024278140626847744,
+    "PLASTIC": 0.7394324541091919,
+    "PAPER": 0.2581397593021393
+  },
+  {
+    "path": "realwaste-main/RealWaste/Plastic/Plastic_624.jpg",
+    "actual": "PLASTIC",
+    "predicted": "ORGANIC",
+    "confidence": 0.46209731698036194,
+    "ORGANIC": 0.46209731698036194,
+    "PLASTIC": 0.24051618576049805,
+    "PAPER": 0.29738649725914
+  },
+  {
+    "path": "realwaste-main/RealWaste/Plastic/Plastic_625.jpg",
+    "actual": "PLASTIC",
+    "predicted": "ORGANIC",
+    "confidence": 0.7736836075782776,
+    "ORGANIC": 0.7736836075782776,
+    "PLASTIC": 0.22608929872512817,
+    "PAPER": 0.00022711344354320318
+  },
+  {
+    "path": "realwaste-main/RealWaste/Plastic/Plastic_745.jpg",
+    "actual": "PLASTIC",
+    "predicted": "ORGANIC",
+    "confidence": 0.8475301265716553,
+    "ORGANIC": 0.8475301265716553,
+    "PLASTIC": 0.1522490233182907,
+    "PAPER": 0.00022088983678258955
+  }
+]

@@ -1,0 +1,83 @@
+{
+  "accuracy": 0.9852941176470589,
+  "macroF1": 0.9864939241407362,
+  "testCount": 340,
+  "classificationReport": {
+    "ORGANIC": {
+      "precision": 0.9767441860465116,
+      "recall": 0.9921259842519685,
+      "f1-score": 0.984375,
+      "support": 127.0
+    },
+    "PLASTIC": {
+      "precision": 0.9854014598540146,
+      "recall": 0.9782608695652174,
+      "f1-score": 0.9818181818181818,
+      "support": 138.0
+    },
+    "PAPER": {
+      "precision": 1.0,
+      "recall": 0.9866666666666667,
+      "f1-score": 0.9932885906040269,
+      "support": 75.0
+    },
+    "accuracy": 0.9852941176470589,
+    "macro avg": {
+      "precision": 0.9873818819668422,
+      "recall": 0.9856845068279508,
+      "f1-score": 0.9864939241407362,
+      "support": 340.0
+    },
+    "weighted avg": {
+      "precision": 0.9853879796698852,
+      "recall": 0.9852941176470589,
+      "f1-score": 0.9853034658417974,
+      "support": 340.0
+    }
+  },
+  "confusionMatrix": [
+    [
+      126,
+      1,
+      0
+    ],
+    [
+      3,
+      135,
+      0
+    ],
+    [
+      0,
+      1,
+      74
+    ]
+  ],
+  "normalizedConfusionMatrix": [
+    [
+      0.9921259842519685,
+      0.007874015748031496,
+      0.0
+    ],
+    [
+      0.021739130434782608,
+      0.9782608695652174,
+      0.0
+    ],
+    [
+      0.0,
+      0.013333333333333334,
+      0.9866666666666667
+    ]
+  ],
+  "classes": [
+    "ORGANIC",
+    "PLASTIC",
+    "PAPER"
+  ],
+  "onnxMaxProbabilityError": 7.748603820800781e-06,
+  "onnxTopLabelAgreement": 1.0,
+  "preprocessMaxAbsError": 0.0,
+  "acceptanceAccuracy": 0.8,
+  "acceptancePassed": true,
+  "modelVersion": "realwaste-mobilenetv3-099ff8e5e058"
+}

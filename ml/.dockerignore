@@ -1,0 +1,8 @@
+**
+!inference/
+!inference/app.py
+!inference/requirements.txt
+!inference/Dockerfile
+!artifacts/
+!artifacts/model.onnx
+!artifacts/metadata.json

@@ -1,0 +1,10 @@
+{
+  "downloadUrl": "https://archive.ics.uci.edu/static/public/908/realwaste.zip",
+  "archiveSha256": "1ede08b32358ee62065bcc1c8cb47a2ece04e8dff5b1fb53342bb8750895b2f3",
+  "archiveBytes": 688545323,
+  "zipCrcVerified": true,
+  "allArchivePathsSafe": true,
+  "manifestImagesCompared": 2268,
+  "allImageSha256Match": true,
+  "manifestSha256": "deb15a7f6ac0e46299e67e3981329aa627671ab4fb17b256342972abc5a06bcc"
+}

@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/sam-single/realwaste",
+  "commit": "156e8e9154eeb163df30fcfd767f55b19633bb06",
+  "treeSha": "156e8e9154eeb163df30fcfd767f55b19633bb06",
+  "images": 2268,
+  "integrity": "Each image verified against Git blob SHA1 from the pinned tree; manifest adds SHA256",
+  "archive": "Locally assembled unmodified original-release subset; not the UCI archive"
+}

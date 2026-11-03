@@ -1,0 +1,15 @@
+{
+  "selected": {
+    "stage": "fine",
+    "epoch": 12,
+    "trainLoss": 0.010540901521880294,
+    "trainAccuracy": 0.9968513853904282,
+    "trainMacroF1": 0.9967183609460761,
+    "validationLoss": 0.018966177632040962,
+    "validationAccuracy": 0.9911764705882353,
+    "validationMacroF1": 0.990643841882232
+  },
+  "trainingSeconds": 747.2495723000029,
+  "modelPtSha256": "e687d8ab58e693f75485050b2b8b2f785e906e65792cd41ea1ccd16dbfabc065",
+  "testPreviouslyInspected": false
+}

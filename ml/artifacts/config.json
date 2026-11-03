@@ -1,0 +1,27 @@
+{
+  "seed": 42,
+  "head_epochs": 5,
+  "fine_epochs": 30,
+  "patience": 7,
+  "batch_size": 32,
+  "output_dir": "artifacts",
+  "architecture": "mobilenet_v3_small",
+  "weights": "IMAGENET1K_V1",
+  "classes": [
+    "ORGANIC",
+    "PLASTIC",
+    "PAPER"
+  ],
+  "classWeights": [
+    0.8926363125351321,
+    0.820671834625323,
+    1.5123809523809524
+  ],
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "torch": "2.11.0+cu128",
+  "python": "3.12.15",
+  "manifestSha256": "deb15a7f6ac0e46299e67e3981329aa627671ab4fb17b256342972abc5a06bcc",
+  "selectionCriterion": "maximum validation macro F1; ties use lower validation loss",
+  "testPolicy": "test is evaluated only after selection.json is written; no test-driven model changes"
+}

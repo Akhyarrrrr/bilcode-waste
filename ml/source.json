@@ -1,0 +1,48 @@
+{
+  "seed": 42,
+  "archiveSha256": "db129de80d374a6d1ce9697dc479cb28565460343fb4e37a2b05db60523df0f3",
+  "archiveBytes": 365325416,
+  "downloadUrl": null,
+  "datasetUrl": "https://archive.ics.uci.edu/dataset/908/realwaste",
+  "originalReleaseUrl": "https://github.com/sam-single/realwaste",
+  "mapping": {
+    "Food Organics": "ORGANIC",
+    "Vegetation": "ORGANIC",
+    "Plastic": "PLASTIC",
+    "Paper": "PAPER"
+  },
+  "licenseCaveat": "UCI lists CC BY 4.0; original GitHub README explicitly lists CC BY-NC-SA 4.0. Resolve the conflicting terms before commercial redistribution.",
+  "nearDuplicateMethod": "64-bit difference hash, Hamming distance <=4, transitive connected components, all labels grouped together",
+  "counts": {
+    "train": {
+      "ORGANIC": 593,
+      "PAPER": 350,
+      "PLASTIC": 645
+    },
+    "validation": {
+      "ORGANIC": 127,
+      "PAPER": 75,
+      "PLASTIC": 138
+    },
+    "test": {
+      "ORGANIC": 127,
+      "PAPER": 75,
+      "PLASTIC": 138
+    }
+  },
+  "originalCounts": {
+    "Food Organics": 411,
+    "Paper": 500,
+    "Plastic": 921,
+    "Vegetation": 436
+  },
+  "groups": 2265,
+  "corrupt": [],
+  "exactDuplicatesRemoved": [],
+  "manifestSha256": "deb15a7f6ac0e46299e67e3981329aa627671ab4fb17b256342972abc5a06bcc",
+  "archiveFilename": "realwaste-subset.zip",
+  "imageDownloadUrlTemplate": "https://raw.githubusercontent.com/sam-single/realwaste/156e8e9154eeb163df30fcfd767f55b19633bb06/{path}",
+  "archiveOrigin": "Deterministic local archive of Git-blob-verified original-release images; run download_subset.py to reproduce",
+  "originalReleaseCommit": "156e8e9154eeb163df30fcfd767f55b19633bb06",
+  "uciArchiveDownloadUrl": "https://archive.ics.uci.edu/static/public/908/realwaste.zip"
+}
