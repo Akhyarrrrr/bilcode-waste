@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "python bundle.py",
+  "functions": {
+    "app.py": {
+      "includeFiles": "{model.onnx,metadata.json}",
+      "excludeFiles": "{test_app.py,__pycache__/**,.venv/**}",
+      "maxDuration": 30
+    }
+  }
+}

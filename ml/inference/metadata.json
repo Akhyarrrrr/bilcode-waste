@@ -1,0 +1,27 @@
+{
+  "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+  "sha256": "099ff8e5e058079945f3f41ac8db86152da7846044f54545e209d449c8b84de9",
+  "classes": [
+    "ORGANIC",
+    "PLASTIC",
+    "PAPER"
+  ],
+  "architecture": "mobilenet_v3_small",
+  "preprocessing": {
+    "resizeShortSide": 256,
+    "cropSize": 224,
+    "interpolation": "bilinear",
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "output": "logits",
+  "opset": 17
+}
