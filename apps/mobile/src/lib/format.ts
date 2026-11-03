@@ -13,6 +13,19 @@ const dateFormat = new Intl.DateTimeFormat("id-ID", {
   year: "numeric",
   timeZone,
 });
+const clockFormat = new Intl.DateTimeFormat("id-ID", {
+  hour: "2-digit",
+  minute: "2-digit",
+  timeZone,
+});
+const dayFormat = new Intl.DateTimeFormat("id-ID", {
+  weekday: "long",
+  day: "numeric",
+  month: "short",
+  timeZone,
+});
+// en-CA formats as YYYY-MM-DD, a sortable calendar-day key.
+const dayKeyFormat = new Intl.DateTimeFormat("en-CA", { timeZone });
 const todayFormat = new Intl.DateTimeFormat("id-ID", {
   weekday: "long",
   day: "numeric",
@@ -23,6 +36,20 @@ const todayFormat = new Intl.DateTimeFormat("id-ID", {
 /** "3 Nov 2026, 07.05 WIB" */
 export const dateTime = (iso: string) =>
   `${dateTimeFormat.format(new Date(iso))} WIB`;
+
+/** "07.05" in WIB. */
+export const clock = (iso: string) => clockFormat.format(new Date(iso));
+
+/** WIB calendar day, e.g. "2026-11-03". */
+export const dayKey = (iso: string) => dayKeyFormat.format(new Date(iso));
+
+/** "Hari ini", "Kemarin", or "Senin, 2 Nov" for a WIB calendar day. */
+export function dayLabel(iso: string, now = Date.now()) {
+  const day = dayKey(iso);
+  if (day === dayKeyFormat.format(now)) return "Hari ini";
+  if (day === dayKeyFormat.format(now - 86_400_000)) return "Kemarin";
+  return dayFormat.format(new Date(iso));
+}
 
 /** "Selasa, 3 November" in WIB. */
 export const today = (now = new Date()) => todayFormat.format(now);

@@ -45,16 +45,18 @@ export function StatusSummary({ stats }: { stats: Statistics | undefined }) {
         ]}
       >
         <View style={[styles.icon, { backgroundColor: bg }]}>
-          <Icon size={18} color={fg} strokeWidth={2.4} />
+          <Icon size={20} color={fg} strokeWidth={2.4} />
         </View>
-        {stats ? (
-          <Text variant="number">{count}</Text>
-        ) : (
-          <Skeleton width={36} height={28} style={styles.numberSkeleton} />
-        )}
-        <Text variant="label" tone="muted">
-          {reportLabels[status]}
-        </Text>
+        <View style={styles.flex}>
+          {stats ? (
+            <Text variant="number">{count}</Text>
+          ) : (
+            <Skeleton width={36} height={28} style={styles.numberSkeleton} />
+          )}
+          <Text variant="label" tone="muted" numberOfLines={1}>
+            {reportLabels[status]}
+          </Text>
+        </View>
       </Pressable>
     );
   };
@@ -80,20 +82,21 @@ const styles = StyleSheet.create({
   },
   cell: {
     width: "50%",
+    flexDirection: "row",
+    alignItems: "center",
+    gap: space.md,
     padding: space.lg,
-    gap: 6,
-    minHeight: 112,
   },
+  flex: { flex: 1 },
   leftCell: { borderRightWidth: 1 },
   topCell: { borderBottomWidth: 1 },
   pressed: { opacity: 0.8 },
   icon: {
-    width: 32,
-    height: 32,
-    borderRadius: 16,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: 2,
   },
   numberSkeleton: { marginVertical: 3 },
 });

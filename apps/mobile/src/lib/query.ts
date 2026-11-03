@@ -36,6 +36,7 @@ export const keys = {
   dashboard: ["dashboard"] as const,
   reports: ["reports"] as const,
   recent: ["reports", "recent"] as const,
+  activity: ["reports", "activity"] as const,
   reportList: (status: Status | null) =>
     ["reports", "list", status ?? "ALL"] as const,
   report: (id: string) => ["report", id] as const,

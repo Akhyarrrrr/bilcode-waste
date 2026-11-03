@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  clock,
   dateTime,
   firstName,
   initials,
@@ -12,6 +13,7 @@ describe("formatting", () => {
   it("shows times in WIB regardless of device time zone", () => {
     expect(dateTime("2026-11-03T00:05:00Z")).toBe("3 Nov 2026, 07.05 WIB");
     expect(today(new Date("2026-11-03T20:05:00Z"))).toBe("Rabu, 4 November");
+    expect(clock("2026-11-03T00:05:00Z")).toBe("07.05");
   });
   it("uses Indonesian decimal commas for confidence", () => {
     expect(percent(0.998)).toBe("99,8%");

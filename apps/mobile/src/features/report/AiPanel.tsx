@@ -6,7 +6,6 @@ import { Card } from "../../components/Card";
 import { ConfidenceBars } from "../../components/ConfidenceBars";
 import { Notice } from "../../components/ErrorState";
 import { Text } from "../../components/Text";
-import { percent } from "../../lib/format";
 import { space } from "../../theme/tokens";
 import { useTheme } from "../../theme/ThemeProvider";
 
@@ -34,8 +33,7 @@ export function AiPanel({ report }: { report: Report }) {
       <View style={styles.row}>
         <Sparkles size={20} color={colors.primary} />
         <Text variant="bodyStrong" style={styles.flex}>
-          Saran AI: {categoryLabels[prediction.category]}{" "}
-          {percent(prediction.confidence)}
+          Saran AI: {categoryLabels[prediction.category]}
         </Text>
       </View>
       <ConfidenceBars scores={prediction.scores} />
@@ -60,8 +58,8 @@ export function AiPanel({ report }: { report: Report }) {
         </Text>
       </View>
       <Text variant="caption" tone="muted">
-        Model {prediction.modelVersion}, inferensi{" "}
-        {Math.round(prediction.durationMs)} ms
+        Inferensi {Math.round(prediction.durationMs)} ms · model{" "}
+        {prediction.modelVersion}
       </Text>
     </Card>
   );

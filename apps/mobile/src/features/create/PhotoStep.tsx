@@ -5,9 +5,12 @@ import {
   Camera,
   Hand,
   Images,
+  Layers,
   RefreshCw,
+  ScanLine,
   Settings,
   Sparkles,
+  Sun,
   type LucideIcon,
 } from "lucide-react-native";
 import { categoryLabels } from "@bilcode/contracts";
@@ -16,7 +19,6 @@ import { Card } from "../../components/Card";
 import { ConfidenceBars } from "../../components/ConfidenceBars";
 import { Notice } from "../../components/ErrorState";
 import { Text } from "../../components/Text";
-import { percent } from "../../lib/format";
 import { radius, space } from "../../theme/tokens";
 import { alpha, useTheme } from "../../theme/ThemeProvider";
 import { LOW_CONFIDENCE } from "../report/AiPanel";
@@ -75,6 +77,12 @@ function SourceButton({
   );
 }
 
+const tips: { icon: LucideIcon; text: string }[] = [
+  { icon: Sun, text: "Foto di tempat terang, tidak melawan cahaya." },
+  { icon: ScanLine, text: "Sampah memenuhi bingkai foto." },
+  { icon: Layers, text: "Satu jenis sampah utama per laporan." },
+];
+
 export function PhotoStep({ flow }: { flow: CreateFlow }) {
   const { colors } = useTheme();
   const { draft, photo } = flow.state;
@@ -126,6 +134,22 @@ export function PhotoStep({ flow }: { flow: CreateFlow }) {
         />
       </View>
 
+      {!draft.imageUri && (
+        <View style={[styles.tips, { borderColor: colors.border }]}>
+          <Text variant="label" tone="muted">
+            Agar saran AI akurat
+          </Text>
+          {tips.map(({ icon: Icon, text }) => (
+            <View key={text} style={styles.row}>
+              <Icon size={18} color={colors.primary} strokeWidth={2} />
+              <Text variant="label" style={styles.flex}>
+                {text}
+              </Text>
+            </View>
+          ))}
+        </View>
+      )}
+
       {phase === "failed" && (
         <Notice text={photo.error}>
           <View style={styles.actions}>
@@ -162,8 +186,7 @@ export function PhotoStep({ flow }: { flow: CreateFlow }) {
           <View style={styles.row}>
             <Sparkles size={20} color={colors.primary} />
             <Text variant="bodyStrong" style={styles.flex}>
-              Saran AI: {categoryLabels[prediction.category]}{" "}
-              {percent(prediction.confidence)}
+              Saran AI: {categoryLabels[prediction.category]}
             </Text>
           </View>
           <ConfidenceBars scores={prediction.scores} animate />
@@ -229,6 +252,13 @@ const styles = StyleSheet.create({
   },
   pressed: { opacity: 0.8 },
   center: { textAlign: "center" },
+  tips: {
+    gap: space.md,
+    padding: space.lg,
+    borderWidth: 1,
+    borderStyle: "dashed",
+    borderRadius: radius.card,
+  },
   actions: { gap: space.sm },
   row: { flexDirection: "row", alignItems: "center", gap: space.sm },
   flex: { flex: 1 },

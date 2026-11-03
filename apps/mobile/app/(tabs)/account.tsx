@@ -62,8 +62,12 @@ export default function Account() {
     <Screen>
       <Header title="Akun" />
       <ProfileCard user={user} />
-      <NameForm user={user} />
-      <PasswordForm user={user} />
+      {!user.isLocked && (
+        <>
+          <NameForm user={user} />
+          <PasswordForm user={user} />
+        </>
+      )}
 
       <SectionHeader title="Tampilan" />
       <Segmented<Preference>

@@ -5,6 +5,7 @@ import {
   type InfiniteData,
 } from "@tanstack/react-query";
 import type { Page, Report, Statistics, Status } from "@bilcode/contracts";
+import { activityFeed } from "./activity";
 import { api, json } from "./api";
 import { keys, queryClient, refreshReports } from "./query";
 
@@ -21,6 +22,18 @@ export const useRecentReports = () =>
     queryKey: keys.recent,
     queryFn: ({ signal }) =>
       api.request<Page<Report>>("/reports?page=1&pageSize=3", { signal }),
+  });
+
+// Module-level so TanStack memoises the derived feed across renders.
+const toActivity = (page: Page<Report>) => activityFeed(page.items);
+
+// shortcut: the feed reads the 100 newest reports (the API page maximum); page it if reporters outgrow that.
+export const useActivity = () =>
+  useQuery({
+    queryKey: keys.activity,
+    queryFn: ({ signal }) =>
+      api.request<Page<Report>>("/reports?page=1&pageSize=100", { signal }),
+    select: toActivity,
   });
 
 export const useReportList = (status: Status | null) =>

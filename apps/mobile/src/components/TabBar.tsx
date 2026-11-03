@@ -3,6 +3,7 @@ import { Pressable, StyleSheet, View } from "react-native";
 import { router } from "expo-router";
 import type { BottomTabBarProps } from "expo-router/tabs";
 import {
+  Bell,
   ClipboardList,
   House,
   Plus,
@@ -17,10 +18,11 @@ import { Text } from "./Text";
 const tabs: Record<string, { label: string; icon: LucideIcon }> = {
   index: { label: "Beranda", icon: House },
   reports: { label: "Laporan", icon: ClipboardList },
+  activity: { label: "Aktivitas", icon: Bell },
   account: { label: "Akun", icon: UserRound },
 };
 
-/** Bottom tabs with a raised create button between Laporan and Akun. */
+/** Two tabs, the raised create button, two tabs: the button sits dead centre. */
 export function TabBar({
   state,
   emitter,

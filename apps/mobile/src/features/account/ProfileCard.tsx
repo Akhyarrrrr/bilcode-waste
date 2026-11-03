@@ -38,7 +38,7 @@ export function ProfileCard({ user }: { user: User }) {
       {user.isLocked && (
         <Notice
           tone="info"
-          text="Akun demo dipakai bersama penilai lain, jadi nama dan kata sandinya dikunci. Daftarkan akun baru untuk mencoba fitur ini."
+          text="Akun demo dipakai bersama penilai lain, jadi ubah nama dan ganti kata sandi dikunci. Daftarkan akun baru untuk mencoba keduanya."
         />
       )}
     </Card>
