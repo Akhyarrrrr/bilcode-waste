@@ -1,0 +1,19 @@
+{
+  "cli": {
+    "version": ">= 16.0.0",
+    "appVersionSource": "local"
+  },
+  "build": {
+    "preview": {
+      "distribution": "internal",
+      "node": "24.22.1",
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://bilcode-waste-api.vercel.app/api/v1",
+        "EXPO_PUBLIC_DEMO_PASSWORD": "BilcodeUser2026!"
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    }
+  }
+}
