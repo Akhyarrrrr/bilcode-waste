@@ -1,0 +1,129 @@
+generator client {
+  provider = "prisma-client"
+  output = "../src/generated/prisma"
+  importFileExtension = "js"
+}
+datasource db {
+  provider = "postgresql"
+  schemas = ["app"]
+}
+enum Role {
+  ADMIN
+  USER
+  @@schema("app")
+}
+enum Category {
+  ORGANIC
+  PLASTIC
+  PAPER
+  @@schema("app")
+}
+enum Status {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+  REJECTED
+  @@schema("app")
+}
+model User {
+  id String @id @default(uuid()) @db.Uuid
+  name String @db.VarChar(100)
+  email String @unique @db.VarChar(254)
+  passwordHash String
+  role Role @default(USER)
+  isActive Boolean @default(true)
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @db.Timestamptz(3)
+  sessions Session[]
+  reports Report[]
+  uploads Upload[]
+  events ReportStatusHistory[]
+  @@schema("app")
+}
+model Session {
+  id String @id @default(uuid()) @db.Uuid
+  tokenHash String @unique
+  userId String @db.Uuid
+  user User @relation(fields:[userId], references:[id], onDelete:Cascade)
+  expiresAt DateTime @db.Timestamptz(3)
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+  @@index([userId])
+  @@index([expiresAt])
+  @@schema("app")
+}
+model AuthAttempt {
+  id String @id @default(uuid()) @db.Uuid
+  key String
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+  @@index([key,createdAt])
+  @@schema("app")
+}
+model Upload {
+  id String @id @default(uuid()) @db.Uuid
+  ownerId String @db.Uuid
+  owner User @relation(fields:[ownerId], references:[id])
+  objectKey String @unique
+  sha256 String
+  bytes Int
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+  reports Report[]
+  predictions Prediction[]
+  @@index([ownerId,createdAt])
+  @@schema("app")
+}
+model Prediction {
+  id String @id @default(uuid()) @db.Uuid
+  uploadId String @db.Uuid
+  upload Upload @relation(fields:[uploadId], references:[id])
+  category Category
+  confidence Float
+  scores Json
+  modelVersion String
+  durationMs Float
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+  reports Report[]
+  @@index([uploadId])
+  @@schema("app")
+}
+model Report {
+  id String @id @default(uuid()) @db.Uuid
+  number Int @unique @default(autoincrement())
+  clientRequestId String @db.Uuid
+  reporterId String @db.Uuid
+  reporter User @relation(fields:[reporterId], references:[id])
+  title String @db.VarChar(120)
+  description String @db.VarChar(2000)
+  category Category
+  status Status @default(PENDING)
+  latitude Float
+  longitude Float
+  locationLabel String @db.VarChar(200)
+  locationAccuracy Float?
+  uploadId String @db.Uuid
+  upload Upload @relation(fields:[uploadId], references:[id])
+  predictionId String? @db.Uuid
+  prediction Prediction? @relation(fields:[predictionId], references:[id])
+  version Int @default(1)
+  isDemo Boolean @default(false)
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @db.Timestamptz(3)
+  deletedAt DateTime? @db.Timestamptz(3)
+  history ReportStatusHistory[]
+  @@unique([reporterId,clientRequestId])
+  @@index([reporterId,createdAt])
+  @@index([status,category,createdAt])
+  @@schema("app")
+}
+model ReportStatusHistory {
+  id String @id @default(uuid()) @db.Uuid
+  reportId String @db.Uuid
+  report Report @relation(fields:[reportId], references:[id])
+  actorId String @db.Uuid
+  actor User @relation(fields:[actorId], references:[id])
+  fromStatus Status?
+  toStatus Status
+  note String? @db.VarChar(500)
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+  @@index([reportId,createdAt])
+  @@schema("app")
+}
