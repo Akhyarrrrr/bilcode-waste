@@ -37,7 +37,7 @@ API, PostgreSQL, dan model yang berjalan di mesin pengembang; "Cloud" berarti di
 | Register dan login                  | `app/auth.tsx`, `src/session.tsx`                       | Tes sesi; emulator (login akun demo)          |
 | Dashboard pengguna                  | `app/(tabs)/index.tsx`                                  | Emulator, terang dan gelap                    |
 | Laporan dengan foto, GPS, deskripsi | `app/create.tsx`, `src/features/create`                 | Tes alur; emulator: galeri → AI → GPS → kirim |
-| Riwayat dan status                  | `app/(tabs)/reports.tsx`, `app/report/[id].tsx`         | Emulator: filter, detail, timeline            |
+| Riwayat dan status                  | `app/(tabs)/reports.tsx`, `activity.tsx`, `report/[id]` | Emulator: filter, aktivitas, detail, timeline |
 | Integrasi API                       | `src/lib/api.ts`, `src/lib/reports.ts`                  | Emulator ke API lokal                         |
 | AI image detection                  | `POST /uploads` + `POST /predictions`, `ConfidenceBars` | Emulator: saran "Kertas" dari model asli      |
 
@@ -59,7 +59,7 @@ API, PostgreSQL, dan model yang berjalan di mesin pengembang; "Cloud" berarti di
 | --------------------------------- | ------------------------------------------ |
 | `npm run typecheck`               | Lulus (api, web, mobile, contracts)        |
 | `npm run lint`                    | Lulus                                      |
-| `npm test`                        | API 18, mobile 29, web 8, kontrak 3: lulus |
+| `npm test`                        | API 18, mobile 32, web 8, kontrak 3: lulus |
 | `npm run build`                   | Lulus                                      |
 | `npm run test:e2e`                | 7 dari 7 alur lulus                        |
 | `npx expo-doctor`                 | 20/20                                      |

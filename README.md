@@ -45,7 +45,7 @@ Paket hosting gratis bisa membuat permintaan pertama lebih lambat (cold start).
 | Register dan login                                   | Token sesi disimpan di SecureStore, sesi dipulihkan saat aplikasi dibuka                                             |
 | Dashboard pengguna                                   | Ringkasan status, laporan terbaru, tombol cepat buat laporan                                                         |
 | Laporan dengan foto, GPS, deskripsi                  | Kamera atau galeri, kompresi di perangkat, GPS dengan akurasi dan peta statis                                        |
-| Riwayat dan status                                   | Daftar dengan filter status dan infinite scroll, detail dengan timeline penanganan                                   |
+| Riwayat dan status                                   | Daftar dengan filter status, tab Aktivitas untuk setiap pembaruan petugas, detail dengan timeline penanganan         |
 | Integrasi API                                        | Klien HTTP bersama (`packages/contracts`) dengan TanStack Query                                                      |
 | AI image detection                                   | Prediksi dari model asli, probabilitas tiap kategori, kategori saran terpilih otomatis, pilihan manual bila AI gagal |
 | **C. Machine learning**                              |                                                                                                                      |
@@ -71,9 +71,9 @@ aktif), mode gelap di web dan mobile, pencarian global `Ctrl K`, dan landing pag
 | **Manajemen pengguna**                                | **Landing page publik**                                   |
 | ![Manajemen pengguna](docs/screenshots/web-users.png) | ![Landing page](docs/screenshots/web-landing.png)         |
 
-| Web di ponsel                                              | Android: beranda                                     | Android: saran AI                                          | Android: detail                                       |
-| ---------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------- |
-| ![Web di ponsel](docs/screenshots/web-phone-dashboard.png) | ![Beranda Android](docs/screenshots/mobile-home.png) | ![Saran AI Android](docs/screenshots/mobile-create-ai.png) | ![Detail Android](docs/screenshots/mobile-detail.png) |
+| Web di ponsel                                              | Android: beranda                                     | Android: aktivitas                                         | Android: saran AI                                          | Android: detail                                       |
+| ---------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------- |
+| ![Web di ponsel](docs/screenshots/web-phone-dashboard.png) | ![Beranda Android](docs/screenshots/mobile-home.png) | ![Aktivitas Android](docs/screenshots/mobile-activity.png) | ![Saran AI Android](docs/screenshots/mobile-create-ai.png) | ![Detail Android](docs/screenshots/mobile-detail.png) |
 
 ## Tech stack dan alasannya
 
@@ -203,7 +203,7 @@ uv run --project ml/inference pytest ml/inference/test_app.py -q
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | API (18 tes)    | Role escalation, kepemilikan, transisi status, versi usang, idempotensi, CSRF, rate limit, akun demo terkunci, admin terakhir, export CSV, statistik |
 | Web (8 tes)     | Format tanggal dan angka, query filter, dialog status (transisi sah, alasan wajib saat menolak)                                                      |
-| Mobile (29 tes) | Alur buat laporan, validasi, sesi, onboarding, perhitungan tile peta                                                                                 |
+| Mobile (32 tes) | Alur buat laporan, feed aktivitas, validasi, sesi, onboarding, tile peta                                                                             |
 | E2E (7 alur)    | Daftar, lapor dengan foto + AI + GPS, admin memproses, export CSV, kelola pengguna, ganti sandi, responsif 360/768/1440 dan menu `Ctrl K`            |
 | Model (pytest)  | Kunci API, batas ukuran, format gambar, bentuk respons                                                                                               |
 
