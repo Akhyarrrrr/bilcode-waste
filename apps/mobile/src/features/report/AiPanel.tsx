@@ -60,7 +60,8 @@ export function AiPanel({ report }: { report: Report }) {
         </Text>
       </View>
       <Text variant="caption" tone="muted">
-        Model {prediction.modelVersion} · {prediction.durationMs} ms
+        Model {prediction.modelVersion}, inferensi{" "}
+        {Math.round(prediction.durationMs)} ms
       </Text>
     </Card>
   );
