@@ -1,0 +1,458 @@
+[
+  {
+    "file": "organic-01.jpg",
+    "category": "ORGANIC",
+    "original_label": "Food Organics",
+    "path": "realwaste-main/RealWaste/Food Organics/Food Organics_108.jpg",
+    "sha256": "2083a90546c83f3116e3d6c825fb94a1f42986eacdbb0e4cf790c43a2c4a19bc",
+    "split": "train",
+    "prediction": {
+      "category": "ORGANIC",
+      "confidence": 0.999999,
+      "scores": {
+        "ORGANIC": 0.999999,
+        "PLASTIC": 0.0,
+        "PAPER": 0.0
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 40
+    }
+  },
+  {
+    "file": "organic-02.jpg",
+    "category": "ORGANIC",
+    "original_label": "Food Organics",
+    "path": "realwaste-main/RealWaste/Food Organics/Food Organics_137.jpg",
+    "sha256": "2eace19d4387e050341ed5dfae6e116fde1c27e144fbe7f87ad28838c8cadabd",
+    "split": "train",
+    "prediction": {
+      "category": "ORGANIC",
+      "confidence": 0.999989,
+      "scores": {
+        "ORGANIC": 0.999989,
+        "PLASTIC": 1.1e-05,
+        "PAPER": 0.0
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 23
+    }
+  },
+  {
+    "file": "organic-03.jpg",
+    "category": "ORGANIC",
+    "original_label": "Food Organics",
+    "path": "realwaste-main/RealWaste/Food Organics/Food Organics_167.jpg",
+    "sha256": "e619a999318e24e25c55804aeb9ecea88d60926a08d1efd9ee1d508e81d898e7",
+    "split": "train",
+    "prediction": {
+      "category": "ORGANIC",
+      "confidence": 1.0,
+      "scores": {
+        "ORGANIC": 1.0,
+        "PLASTIC": 0.0,
+        "PAPER": 0.0
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 24
+    }
+  },
+  {
+    "file": "organic-04.jpg",
+    "category": "ORGANIC",
+    "original_label": "Food Organics",
+    "path": "realwaste-main/RealWaste/Food Organics/Food Organics_196.jpg",
+    "sha256": "3b6ddbbb70534707a8c686c45e0e1c314790e5b315c0b009c497ac277f3bdba9",
+    "split": "train",
+    "prediction": {
+      "category": "ORGANIC",
+      "confidence": 0.997399,
+      "scores": {
+        "ORGANIC": 0.997399,
+        "PLASTIC": 0.002598,
+        "PAPER": 3e-06
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 36
+    }
+  },
+  {
+    "file": "organic-05.jpg",
+    "category": "ORGANIC",
+    "original_label": "Vegetation",
+    "path": "realwaste-main/RealWaste/Vegetation/Vegetation_105.jpg",
+    "sha256": "a4e555fa1319f2022ce0a4344eaf0c789ffb98c0c262eb5c5a30847c5ced64bc",
+    "split": "train",
+    "prediction": {
+      "category": "ORGANIC",
+      "confidence": 1.0,
+      "scores": {
+        "ORGANIC": 1.0,
+        "PLASTIC": 0.0,
+        "PAPER": 0.0
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 44
+    }
+  },
+  {
+    "file": "organic-06.jpg",
+    "category": "ORGANIC",
+    "original_label": "Vegetation",
+    "path": "realwaste-main/RealWaste/Vegetation/Vegetation_139.jpg",
+    "sha256": "f5bef4328b90133dcc56eae4e55865dd4047a8052a7534eb988a49a4d7d1521e",
+    "split": "train",
+    "prediction": {
+      "category": "ORGANIC",
+      "confidence": 1.0,
+      "scores": {
+        "ORGANIC": 1.0,
+        "PLASTIC": 0.0,
+        "PAPER": 0.0
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 61
+    }
+  },
+  {
+    "file": "organic-07.jpg",
+    "category": "ORGANIC",
+    "original_label": "Vegetation",
+    "path": "realwaste-main/RealWaste/Vegetation/Vegetation_166.jpg",
+    "sha256": "db593798faeb3976bba18cf43651a17a629c5d66f7fdc65e503d8bc0caf15031",
+    "split": "train",
+    "prediction": {
+      "category": "ORGANIC",
+      "confidence": 1.0,
+      "scores": {
+        "ORGANIC": 1.0,
+        "PLASTIC": 0.0,
+        "PAPER": 0.0
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 58
+    }
+  },
+  {
+    "file": "organic-08.jpg",
+    "category": "ORGANIC",
+    "original_label": "Vegetation",
+    "path": "realwaste-main/RealWaste/Vegetation/Vegetation_20.jpg",
+    "sha256": "3a2072f8e20954b7cf0e9ce2752b71f7fb2b3c7bfcce3dd516e1d839d2a732ce",
+    "split": "train",
+    "prediction": {
+      "category": "ORGANIC",
+      "confidence": 1.0,
+      "scores": {
+        "ORGANIC": 1.0,
+        "PLASTIC": 0.0,
+        "PAPER": 0.0
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 75
+    }
+  },
+  {
+    "file": "plastic-01.jpg",
+    "category": "PLASTIC",
+    "original_label": "Plastic",
+    "path": "realwaste-main/RealWaste/Plastic/Plastic_108.jpg",
+    "sha256": "2bd2e47f469bd89fa2624bb1ca9024a5b98ae860291291fd9aef943cd10f1c29",
+    "split": "train",
+    "prediction": {
+      "category": "PLASTIC",
+      "confidence": 0.999995,
+      "scores": {
+        "ORGANIC": 1e-06,
+        "PLASTIC": 0.999995,
+        "PAPER": 4e-06
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 47
+    }
+  },
+  {
+    "file": "plastic-02.jpg",
+    "category": "PLASTIC",
+    "original_label": "Plastic",
+    "path": "realwaste-main/RealWaste/Plastic/Plastic_145.jpg",
+    "sha256": "0f1e28a531fd6d75d06a1c54e5794ddf77408294839cc6e88fcf2dc2cc518a8f",
+    "split": "train",
+    "prediction": {
+      "category": "PLASTIC",
+      "confidence": 0.999996,
+      "scores": {
+        "ORGANIC": 0.0,
+        "PLASTIC": 0.999996,
+        "PAPER": 4e-06
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 68
+    }
+  },
+  {
+    "file": "plastic-03.jpg",
+    "category": "PLASTIC",
+    "original_label": "Plastic",
+    "path": "realwaste-main/RealWaste/Plastic/Plastic_185.jpg",
+    "sha256": "c774eaf0ff14ca3e308512a6eeffc9273720f5c177b54d0efe4c0bf191d40694",
+    "split": "train",
+    "prediction": {
+      "category": "PLASTIC",
+      "confidence": 0.999998,
+      "scores": {
+        "ORGANIC": 0.0,
+        "PLASTIC": 0.999998,
+        "PAPER": 2e-06
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 52
+    }
+  },
+  {
+    "file": "plastic-04.jpg",
+    "category": "PLASTIC",
+    "original_label": "Plastic",
+    "path": "realwaste-main/RealWaste/Plastic/Plastic_216.jpg",
+    "sha256": "7fdb1dcb0599f17ee056c8ed6a59ae7bb603f2bd97c692431adaafabb95a77b0",
+    "split": "train",
+    "prediction": {
+      "category": "PLASTIC",
+      "confidence": 0.999975,
+      "scores": {
+        "ORGANIC": 2.4e-05,
+        "PLASTIC": 0.999975,
+        "PAPER": 1e-06
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 46
+    }
+  },
+  {
+    "file": "plastic-05.jpg",
+    "category": "PLASTIC",
+    "original_label": "Plastic",
+    "path": "realwaste-main/RealWaste/Plastic/Plastic_247.jpg",
+    "sha256": "973d3aa57cde9005720b8b1fe0daf093d39870ea5c6a9a800dfde6a566ead204",
+    "split": "train",
+    "prediction": {
+      "category": "PLASTIC",
+      "confidence": 0.999999,
+      "scores": {
+        "ORGANIC": 0.0,
+        "PLASTIC": 0.999999,
+        "PAPER": 1e-06
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 50
+    }
+  },
+  {
+    "file": "plastic-06.jpg",
+    "category": "PLASTIC",
+    "original_label": "Plastic",
+    "path": "realwaste-main/RealWaste/Plastic/Plastic_279.jpg",
+    "sha256": "e64015804971f4eeaa9b167d3c855d2959c8290bc8fcb3d6efa3ec2724a2c0be",
+    "split": "train",
+    "prediction": {
+      "category": "PLASTIC",
+      "confidence": 0.999985,
+      "scores": {
+        "ORGANIC": 3e-06,
+        "PLASTIC": 0.999985,
+        "PAPER": 1.2e-05
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 66
+    }
+  },
+  {
+    "file": "plastic-07.jpg",
+    "category": "PLASTIC",
+    "original_label": "Plastic",
+    "path": "realwaste-main/RealWaste/Plastic/Plastic_310.jpg",
+    "sha256": "96aed719a57b2565d0daad44f6a849099dda43414f51aabf08dcd5789a3139e3",
+    "split": "train",
+    "prediction": {
+      "category": "PLASTIC",
+      "confidence": 0.999734,
+      "scores": {
+        "ORGANIC": 0.00026,
+        "PLASTIC": 0.999734,
+        "PAPER": 6e-06
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 105
+    }
+  },
+  {
+    "file": "plastic-08.jpg",
+    "category": "PLASTIC",
+    "original_label": "Plastic",
+    "path": "realwaste-main/RealWaste/Plastic/Plastic_339.jpg",
+    "sha256": "86c685e38928570f851ba0ac29dcba983c9f059cf9fd116cb9e8071db4f6127e",
+    "split": "train",
+    "prediction": {
+      "category": "PLASTIC",
+      "confidence": 0.999986,
+      "scores": {
+        "ORGANIC": 1.4e-05,
+        "PLASTIC": 0.999986,
+        "PAPER": 0.0
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 72
+    }
+  },
+  {
+    "file": "paper-01.jpg",
+    "category": "PAPER",
+    "original_label": "Paper",
+    "path": "realwaste-main/RealWaste/Paper/Paper_106.jpg",
+    "sha256": "bcf40abe950e34228fb357d12ca0037a3e2e5917ac21c84ec3909c6ee9e788e6",
+    "split": "train",
+    "prediction": {
+      "category": "PAPER",
+      "confidence": 0.999969,
+      "scores": {
+        "ORGANIC": 5e-06,
+        "PLASTIC": 2.6e-05,
+        "PAPER": 0.999969
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 61
+    }
+  },
+  {
+    "file": "paper-02.jpg",
+    "category": "PAPER",
+    "original_label": "Paper",
+    "path": "realwaste-main/RealWaste/Paper/Paper_127.jpg",
+    "sha256": "ded49a82f3838c00a4fe2c13ef1a21248fe7f56368988740ddd97d3274465e7d",
+    "split": "train",
+    "prediction": {
+      "category": "PAPER",
+      "confidence": 1.0,
+      "scores": {
+        "ORGANIC": 0.0,
+        "PLASTIC": 0.0,
+        "PAPER": 1.0
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 34
+    }
+  },
+  {
+    "file": "paper-03.jpg",
+    "category": "PAPER",
+    "original_label": "Paper",
+    "path": "realwaste-main/RealWaste/Paper/Paper_148.jpg",
+    "sha256": "01acbce9785e8a4d4c6e859454952575c86a38ba8e5844006253aa97af3e2090",
+    "split": "train",
+    "prediction": {
+      "category": "PAPER",
+      "confidence": 1.0,
+      "scores": {
+        "ORGANIC": 0.0,
+        "PLASTIC": 0.0,
+        "PAPER": 1.0
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 52
+    }
+  },
+  {
+    "file": "paper-04.jpg",
+    "category": "PAPER",
+    "original_label": "Paper",
+    "path": "realwaste-main/RealWaste/Paper/Paper_165.jpg",
+    "sha256": "d5434327829c9dfcc1e26e3ac1d9affffbe894f279dd256ca92d7202bb723572",
+    "split": "train",
+    "prediction": {
+      "category": "PAPER",
+      "confidence": 0.999999,
+      "scores": {
+        "ORGANIC": 0.0,
+        "PLASTIC": 1e-06,
+        "PAPER": 0.999999
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 50
+    }
+  },
+  {
+    "file": "paper-05.jpg",
+    "category": "PAPER",
+    "original_label": "Paper",
+    "path": "realwaste-main/RealWaste/Paper/Paper_189.jpg",
+    "sha256": "2a5b5cf7ab2073a051c6d0266eb47eb40361cdf0591bb8e5900d79ccdd8dcbe0",
+    "split": "train",
+    "prediction": {
+      "category": "PAPER",
+      "confidence": 0.999787,
+      "scores": {
+        "ORGANIC": 1e-06,
+        "PLASTIC": 0.000212,
+        "PAPER": 0.999787
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 43
+    }
+  },
+  {
+    "file": "paper-06.jpg",
+    "category": "PAPER",
+    "original_label": "Paper",
+    "path": "realwaste-main/RealWaste/Paper/Paper_204.jpg",
+    "sha256": "9c2c93d6b7b8fa492bd263a2c592f221fc282161759798f1669bc8dacafb2a1d",
+    "split": "train",
+    "prediction": {
+      "category": "PAPER",
+      "confidence": 0.999607,
+      "scores": {
+        "ORGANIC": 6e-06,
+        "PLASTIC": 0.000387,
+        "PAPER": 0.999607
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 53
+    }
+  },
+  {
+    "file": "paper-07.jpg",
+    "category": "PAPER",
+    "original_label": "Paper",
+    "path": "realwaste-main/RealWaste/Paper/Paper_222.jpg",
+    "sha256": "45c15cdb2dd08385fd85d10749888e27fa7b57976980d54f5be84cbde00bebcb",
+    "split": "train",
+    "prediction": {
+      "category": "PAPER",
+      "confidence": 0.999423,
+      "scores": {
+        "ORGANIC": 0.0,
+        "PLASTIC": 0.000576,
+        "PAPER": 0.999423
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 53
+    }
+  },
+  {
+    "file": "paper-08.jpg",
+    "category": "PAPER",
+    "original_label": "Paper",
+    "path": "realwaste-main/RealWaste/Paper/Paper_239.jpg",
+    "sha256": "ff1dbd82f69fa8a69a09c4ae6b550ad6ad59109004907a910b51e6fa95a1a59a",
+    "split": "train",
+    "prediction": {
+      "category": "PAPER",
+      "confidence": 0.999997,
+      "scores": {
+        "ORGANIC": 0.0,
+        "PLASTIC": 3e-06,
+        "PAPER": 0.999997
+      },
+      "modelVersion": "realwaste-mobilenetv3-099ff8e5e058",
+      "durationMs": 44
+    }
+  }
+]
